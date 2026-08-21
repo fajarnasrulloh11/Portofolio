@@ -70,10 +70,16 @@ export const InteractiveTerminal: React.FC = () => {
       case 'projects':
         responseOutput = (
           <div className="text-xs space-y-1 font-mono">
-            <p className="text-cyan-300">1. NexusAI — Enterprise RAG & LLM Engine (&lt;180ms latency)</p>
-            <p className="text-indigo-300">2. PulseCloud — Distributed Server Telemetry (120k ops/sec)</p>
-            <p className="text-emerald-300">3. HyperShop — Edge-Accelerated E-Commerce (100/100 Lighthouse)</p>
-          </div>
+  <p className="text-cyan-300">
+    1. POS Kasir — Fullstack Point of Sale · Next.js · Django · PostgreSQL
+  </p>
+  <p className="text-indigo-300">
+    2. Student Management — Fullstack CRUD · Next.js · Django REST · PostgreSQL
+  </p>
+  <p className="text-emerald-300">
+    3. Portfolio — Fullstack Personal Portfolio · Next.js · API · Email Integration
+  </p>
+</div>
         );
         break;
 
