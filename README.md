@@ -2,7 +2,7 @@
 
 <div align="center">
 
-### Full-Stack Engineer
+### Software Engineer
 
 Building modern, scalable, and user-focused web applications with clean architecture and modern technologies.
 
