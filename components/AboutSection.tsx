@@ -46,7 +46,7 @@ export const AboutSection: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-slate-400">System Specialty</span>
-                    <span className="text-cyan-300">RAG & Distributed AI</span>
+                    <span className="text-cyan-300">Web Development</span>
                   </div>
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-slate-400">Work Preference</span>
@@ -111,11 +111,11 @@ export const AboutSection: React.FC = () => {
               {activeTab === 'story' && (
                 <div className="space-y-4 text-slate-300 text-sm leading-relaxed animate-in fade-in duration-200">
                   <p>
-                    I started my software journey building web interfaces and backend services for tech startups. Over the past 6+ years, I transitioned into leading full-stack engineering initiatives and designing distributed AI infrastructure.
+I’m a 4th-semester Information Technology student and aspiring Full-Stack Software Engineer with 5+ years of hands-on learning and project experience.
+
                   </p>
                   <p>
-                    My obsession lies in the intersection of sub-second user interface responsiveness and heavy backend data pipelines. Whether optimizing Next.js Server Components or scaling vector database retrieval, I prioritize clean architecture and developer ergonomics.
-                  </p>
+I build modern web applications across the frontend and backend using Next.js, React, TypeScript, Node.js, Django, and PostgreSQL. I’m passionate about clean architecture, scalable systems, and turning ideas into reliable software through continuous learning and practical development.                  </p>
                 </div>
               )}
 

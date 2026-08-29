@@ -3,14 +3,14 @@ import { Project, Skill, Experience, CodeSnippet } from '@/types/portfolio';
 
 export const PERSONAL_INFO = {
   name: 'Fajar Nasrulloh',
-  role: 'Full-stack Engineer',
-  tagline: 'Hi, I/m Fajar Nasrulloh—a Full-Stack Developer focused on building modern, responsive, and scalable web applications, from frontend to backend.',
+  role: 'Software Engineer',
+  tagline: 'Hi, I/m Fajar Nasrulloh—a Software Engineer focused on building modern, responsive, and scalable web applications, from frontend to backend.',
   location: 'Jakarta Selatan, DKI Jakarta, Indonesia',
   email: 'fajarnasrulloh89@gmail.com',
   github: 'https://github.com/fajarnasrulloh11',
   linkedin: 'https://www.linkedin.com/in/fajar-nasrulloh-943ab1290/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BvtHR%2Fq57SqqW1TDERNIPfQ%3D%3D',
-  status: 'Open for Select Consultations & Roles',
-  bio: `Passionate Full-Stack Engineer focused on building modern and scalable web applications. Experienced with Next.js, React, TypeScript, Django, Python, REST APIs, and PostgreSQL, with a strong interest in creating reliable solutions across frontend and backend.`,
+  status: 'Software Engineer',
+  bio: `Passionate Software Engineer focused on building modern and scalable web applications. Experienced with Next.js, React, TypeScript, Django, Python, REST APIs, and PostgreSQL, with a strong interest in creating reliable solutions across frontend and backend.`,
   stats: [
     { label: 'Project Built', value: '4+' },
     { label: 'Main Stacks', value: '2+' },
