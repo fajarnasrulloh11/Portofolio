@@ -4,7 +4,7 @@ import { Project, Skill, Experience, CodeSnippet } from '@/types/portfolio';
 export const PERSONAL_INFO = {
   name: 'Fajar Nasrulloh',
   role: 'Software Engineer',
-  tagline: 'Hi, I/m Fajar Nasrulloh—a Software Engineer focused on building modern, responsive, and scalable web applications, from frontend to backend.',
+  tagline: 'Software Engineer focused on building modern, responsive, and scalable web applications, from frontend to backend.',
   location: 'Jakarta Selatan, DKI Jakarta, Indonesia',
   email: 'fajarnasrulloh89@gmail.com',
   github: 'https://github.com/fajarnasrulloh11',
@@ -12,10 +12,9 @@ export const PERSONAL_INFO = {
   status: 'Software Engineer',
   bio: `Passionate Software Engineer focused on building modern and scalable web applications. Experienced with Next.js, React, TypeScript, Django, Python, REST APIs, and PostgreSQL, with a strong interest in creating reliable solutions across frontend and backend.`,
   stats: [
-    { label: 'Project Built', value: '4+' },
-    { label: 'Main Stacks', value: '2+' },
+    { label: 'Clean Code', value: '100%' },
+    { label: 'Certifications', value: '2+' },
     { label: 'Developer', value: '1+' },
-    { label: '∞', value: 'Things To Learn' },
   ]
 };
 
@@ -157,20 +156,68 @@ architecture: [
 
 export const SKILLS_DATA: Skill[] = [
   // Frontend
-  { name: 'React 19 & Next.js 16', level: 98, category: 'Frontend', icon: 'CodeIcon', popular: true },
-  { name: 'TypeScript / JavaScript', level: 96, category: 'Frontend', icon: 'CodeIcon', popular: true },
-  { name: 'Tailwind CSS v4 & Styling', level: 95, category: 'Frontend', icon: 'SparklesIcon', popular: true },
-  { name: 'HTML5 / Modern CSS / Canvas', level: 92, category: 'Frontend', icon: 'LayersIcon' },
-  { name: 'State Management (Zustand/Jotai)', level: 90, category: 'Frontend', icon: 'ZapIcon' },
+  {
+    name: 'React 19 & Next.js 16',
+    category: 'Frontend',
+    icon: 'ReactIcon',
+    popular: true,
+  },
+  {
+    name: 'TypeScript / JavaScript',
+    category: 'Frontend',
+    icon: 'TypeScriptIcon',
+    popular: true,
+  },
+  {
+    name: 'Tailwind CSS v4 & Styling',
+    category: 'Frontend',
+    icon: 'TailwindIcon',
+    popular: true,
+  },
+  {
+    name: 'HTML5 / Modern CSS / Canvas',
+    category: 'Frontend',
+    icon: 'HtmlIcon',
+  },
+  {
+    name: 'State Management (Zustand/Jotai)',
+    category: 'Frontend',
+    icon: 'ZapIcon',
+  },
 
   // Backend
-  { name: 'Node.js & Express', level: 94, category: 'Backend', icon: 'ServerIcon', popular: true },
-  { name: 'Python (FastAPI / PyTorch)', level: 90, category: 'Backend', icon: 'CpuIcon', popular: true },
-  { name: 'Go (Golang)', level: 85, category: 'Backend', icon: 'ServerIcon' },
-  { name: 'PostgreSQL & Prisma / Drizzle', level: 92, category: 'Backend', icon: 'DatabaseIcon', popular: true },
-  { name: 'GraphQL & REST API Design', level: 93, category: 'Backend', icon: 'ServerIcon' },
-
+  {
+    name: 'Node.js & Express',
+    category: 'Backend',
+    icon: 'NodeJsIcon',
+    popular: true,
+  },
+  {
+    name: 'Python (FastAPI / PyTorch)',
+    category: 'Backend',
+    icon: 'PythonIcon',
+    popular: true,
+  },
+  {
+    name: 'Go (Golang)',
+    category: 'Backend',
+    icon: 'GoIcon',
+  },
+  {
+    name: 'PostgreSQL & Prisma / Drizzle',
+    category: 'Backend',
+    icon: 'PostgreSqlIcon',
+    popular: true,
+  },
+  {
+    name: 'GraphQL & REST API Design',
+    category: 'Backend',
+    icon: 'GraphQLIcon',
+  },
 ];
+
+
+
 
 export const EXPERIENCE_DATA: Experience[] = [
   {

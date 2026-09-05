@@ -36,7 +36,8 @@ export const ContactSection: React.FC = () => {
 
   const topics = [
     'Full-Stack Project',
-    'Full-Time / Lead Role'
+    'Internship',
+    'Contract Project'
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -131,7 +132,7 @@ export const ContactSection: React.FC = () => {
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                 </span>
                 <p className="text-xs text-slate-300">
-                  Currently accepting select advisory projects & Lead Full-Stack Engineering roles.
+                  Currently accepting full-stack developer projects junior / mid engineering roles & interships.
                 </p>
               </div>
 
