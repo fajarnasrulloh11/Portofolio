@@ -13,21 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fajar Nasrulloh — Portofolio",
-  description: "Portfolio of Fajar Nasrulloh: Architecting ultra-performant Next.js web applications, high-scale RAG AI engines, and cloud distributed systems.",
-  keywords: ["Full-Stack Engineer", "Next.js 16", "React 19", "AI Engineer", "TypeScript", "Tailwind CSS", "Developer Portfolio"],
+  title: "Fajar Nasrulloh — Software Developer",
+  description: "Portfolio of Fajar Nasrulloh, an Information Technology student building frontend and backend web applications.",
+  keywords: ["Software Developer", "Next.js", "React", "TypeScript", "Web Development", "Developer Portfolio"],
   authors: [{ name: "Fajar Nasrulloh" }],
   openGraph: {
-    title: "Fajar Nasrulloh — Full-Stack Architect & AI Engineer",
-    description: "High-performance web applications, distributed systems, and modern AI engineering portfolio.",
-    url: " ",
+    title: "Fajar Nasrulloh — Software Developer",
+    description: "Web development projects and technical work by Fajar Nasrulloh.",
     siteName: "Fajar Nasrulloh Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Fajar Nasrulloh Portfolio",
-    description: "Full stack & Data Scientist",
+    description: "Web development projects and technical work by Fajar Nasrulloh.",
   },
 };
 

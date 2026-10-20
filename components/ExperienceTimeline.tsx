@@ -2,26 +2,19 @@
 
 import React from 'react';
 import { EXPERIENCE_DATA } from '@/data/portfolioData';
-import {
-  SparklesIcon,
-  MapPinIcon,
-  CheckCircleIcon,
-} from '@/components/icons';
+import { MapPinIcon, CheckCircleIcon } from '@/components/icons';
 
 export const ExperienceTimeline: React.FC = () => {
   return (
-    <section id="experience" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="experience" className="border-b border-slate-800/80 py-16 sm:py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-            <SparklesIcon size={14} />
-            <span>Learning Journey & Certifications</span>
-          </div>
+        <div className="max-w-2xl mb-9 space-y-3">
+          <p className="font-mono text-sm text-sky-300">03 / Learning</p>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Certifications <span className="text-gradient">& Training</span>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+            Certifications &amp; training
           </h2>
 
           <p className="text-slate-400 text-sm sm:text-base">
@@ -31,7 +24,7 @@ export const ExperienceTimeline: React.FC = () => {
         </div>
 
         {/* Vertical Timeline */}
-        <div className="relative max-w-4xl mx-auto pl-6 sm:pl-8 border-l border-slate-800 space-y-12">
+        <div className="relative max-w-4xl pl-6 sm:pl-8 border-l border-slate-800 space-y-8">
 
           {EXPERIENCE_DATA.map((exp) => (
             <div key={exp.id} className="relative group">
@@ -46,35 +39,24 @@ export const ExperienceTimeline: React.FC = () => {
                   w-4
                   h-4
                   rounded-full
-                  bg-slate-900
+                  bg-[#0b0d10]
                   border-2
-                  border-indigo-500
-                  group-hover:border-emerald-400
-                  group-hover:scale-125
-                  transition-all
-                  duration-300
-                  shadow-lg
-                  shadow-indigo-500/50
+                  border-slate-500
                 "
               >
-                {exp.current && (
-                  <span className="animate-ping absolute inset-0 rounded-full bg-emerald-400 opacity-75" />
-                )}
               </div>
 
               {/* Certification Card */}
               <div
                 className="
-                  glass-card
+                  bg-[#101317]
                   p-6
                   sm:p-8
-                  rounded-2xl
+                  rounded-lg
                   border
                   border-slate-800
                   space-y-4
-                  hover:border-indigo-500/40
-                  transition-all
-                  duration-300
+                  transition-colors
                 "
               >
 
@@ -82,7 +64,7 @@ export const ExperienceTimeline: React.FC = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
 
                   <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                    <h3 className="text-xl font-semibold text-white">
                       {exp.role}
                     </h3>
 
@@ -94,7 +76,7 @@ export const ExperienceTimeline: React.FC = () => {
                   <div className="flex items-center gap-3 text-xs font-mono">
 
                     {/* Period */}
-                    <span className="px-3 py-1 rounded-full bg-slate-900 text-cyan-400 border border-slate-800">
+                    <span className="text-sky-300">
                       {exp.period}
                     </span>
 
@@ -126,9 +108,9 @@ export const ExperienceTimeline: React.FC = () => {
                         key={idx}
                         className="text-xs sm:text-sm text-slate-300 flex items-start gap-2.5"
                       >
-                        <CheckCircleIcon
+                          <CheckCircleIcon
                           size={16}
-                          className="text-emerald-400 shrink-0 mt-0.5"
+                            className="text-sky-300 shrink-0 mt-0.5"
                         />
 
                         <span>{acc}</span>
@@ -150,10 +132,10 @@ export const ExperienceTimeline: React.FC = () => {
                         rounded-md
                         text-[11px]
                         font-mono
-                        bg-slate-900
+                        bg-transparent
                         text-slate-400
-                        border
-                        border-slate-800
+                        border-b
+                        border-slate-700
                       "
                     >
                       {tech}
@@ -176,14 +158,13 @@ export const ExperienceTimeline: React.FC = () => {
                         px-4
                         py-2
                         rounded-lg
-                        bg-indigo-500/10
+                        bg-transparent
                         border
-                        border-indigo-500/20
-                        text-indigo-300
+                        border-slate-700
+                        text-sky-300
                         text-xs
                         font-medium
-                        hover:bg-indigo-500/20
-                        hover:border-indigo-400/40
+                        hover:border-sky-300
                         transition-all
                       "
                     >

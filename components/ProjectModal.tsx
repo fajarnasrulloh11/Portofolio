@@ -27,17 +27,27 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4 sm:p-6 md:p-10">
       {/* Modal Backdrop Click Target */}
-      <div className="absolute inset-0" onClick={onClose} />
+      <button
+        type="button"
+        className="absolute inset-0 h-full w-full cursor-default"
+        onClick={onClose}
+        aria-label="Close project details"
+      />
 
       {/* Modal Content Box */}
-      <div className="relative w-full max-w-3xl glass-panel bg-[#0d101d] rounded-2xl border border-slate-800 shadow-2xl overflow-hidden z-10 max-h-[90vh] flex flex-col">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
+        className="relative z-10 flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-lg border border-slate-700 bg-[#101317]"
+      >
         
         {/* Header Bar */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0a0c16]">
+        <div className="flex items-center justify-between border-b border-slate-800 px-6 py-4">
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase">
+            <span className="text-xs font-mono text-sky-300 uppercase">
               {project.category}
             </span>
             <span className="text-xs text-slate-400 font-mono">Released {project.date}</span>
@@ -45,7 +55,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-all focus:outline-none"
+            className="min-h-10 min-w-10 rounded-md border border-slate-700 text-slate-400 hover:text-white"
             aria-label="Close modal"
           >
             <XIcon size={18} />
@@ -57,22 +67,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           
           {/* Project Title & Short Summary */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            <h2 id="project-modal-title" className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
               {project.title}
             </h2>
             <p className="mt-2 text-slate-300 text-sm leading-relaxed">
               {project.fullDescription}
             </p>
-          </div>
-
-          {/* Key Performance Metrics */}
-          <div className="grid grid-cols-3 gap-3 p-4 rounded-xl bg-slate-900/80 border border-slate-800">
-            {project.metrics.map((m, idx) => (
-              <div key={idx} className="text-center space-y-1">
-                <p className="text-lg font-mono font-bold text-cyan-400">{m.value}</p>
-                <p className="text-xs text-slate-400">{m.label}</p>
-              </div>
-            ))}
           </div>
 
           {/* Engineering Highlights */}
@@ -130,27 +130,27 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         </div>
 
         {/* Footer Actions */}
-        <div className="flex items-center justify-between px-6 py-4 border-t border-slate-800 bg-[#0a0c16]">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-800 px-6 py-4">
           <div className="flex items-center gap-3">
-            <a
+          {project.liveUrl && project.liveUrl !== 'https://example.com' && <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-lg shadow-indigo-600/20 transition-all"
             >
               <ExternalLinkIcon size={14} />
-              <span>Live Demo</span>
-            </a>
+              <span>Live site</span>
+            </a>}
 
-            <a
+            {project.githubUrl && <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-all"
             >
               <GithubIcon size={14} />
-              <span>Repository</span>
-            </a>
+              <span>Source</span>
+            </a>}
           </div>
 
           <button

@@ -262,10 +262,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
 
           {/* Title */}
           <div className="flex items-center gap-2">
-            <SparklesIcon
-              size={16}
-              className="text-[#818cf8]"
-            />
+            
 
             <h3 className="text-sm font-bold text-white sm:text-base">
               Curriculum Vitae / Resume
@@ -283,12 +280,12 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
               className="
                 flex items-center gap-1.5
                 rounded-lg
-                bg-[#4f46e5]
+                bg-[#1e293b]
                 px-3 py-1.5
-                text-xs font-semibold text-white
+                text-xs font-semibold text-slate-200
                 shadow-md
                 transition-all
-                hover:bg-[#6366f1]
+                hover:bg-[#334155]
                 disabled:cursor-not-allowed
                 disabled:opacity-60
               "

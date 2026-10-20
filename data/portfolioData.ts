@@ -117,6 +117,41 @@ architecture: [
   ],
   date: '2024'
 },
+
+{
+  id: 'wowo-website',
+  title: 'Wowo Website',
+  shortDescription: 'Modern and responsive website designed with a clean user interface and an engaging browsing experience.',
+  fullDescription: 'A modern web project focused on delivering a responsive and user-friendly website experience. The project showcases website layout, visual presentation, and navigation optimized for different screen sizes.',
+  category: 'frontend',
+  image: '/wowo.png',
+  tags: [
+    'Web Development',
+    'Responsive Design',
+    'UI/UX Design',
+    'Frontend Development'
+  ],
+  metrics: [
+    { label: 'Design', value: 'Responsive' },
+    { label: 'Project', value: 'Website' },
+    { label: 'UI', value: 'Modern & Clean' }
+  ],
+  githubUrl: 'https://github.com/fajarnasrulloh11/Wowo',
+  liveUrl: 'https://wowo-nine.vercel.app/',
+  featured: true,
+  highlights: [
+    'Developed a modern website with a responsive layout',
+    'Organized page sections to provide a clear and intuitive browsing experience',
+    'Focused on clean visual presentation and usability across different screen sizes'
+  ],
+  architecture: [
+    'Frontend website deployed on Vercel',
+    'Structured page layouts and reusable interface elements',
+    'Responsive design approach for desktop, tablet, and mobile devices'
+  ],
+  date: '2026'
+},
+
   {
   id: 'whatsapp-bot',
   title: 'WhatsApp Bot - Multi-Feature Automation',

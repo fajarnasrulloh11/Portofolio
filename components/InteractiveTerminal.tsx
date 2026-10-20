@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { TerminalIcon, CodeIcon, CopyIcon, CheckIcon, SparklesIcon } from '@/components/icons';
-import { CODE_SNIPPETS, PERSONAL_INFO } from '@/data/portfolioData';
+import { TerminalIcon, CodeIcon, CopyIcon, CheckIcon } from '@/components/icons';
+import { CODE_SNIPPETS, PERSONAL_INFO, PROJECTS_DATA, SKILLS_DATA } from '@/data/portfolioData';
 
 export const InteractiveTerminal: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'terminal' | 'code'>('terminal');
@@ -13,8 +13,8 @@ export const InteractiveTerminal: React.FC = () => {
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalHistory, setTerminalHistory] = useState<Array<{ cmd: string; output: React.ReactNode }>>([
     {
-      cmd: 'Fajar --version',
-      output: <span className="text-emerald-400">fajar-nasrulloh-cli v2.6.0 [Next.js 16 Architecture Mode]</span>
+      cmd: 'profile',
+      output: <span className="text-slate-300">Portfolio profile loaded.</span>
     },
     {
       cmd: 'whoami',
@@ -60,35 +60,33 @@ export const InteractiveTerminal: React.FC = () => {
       case 'skills':
         responseOutput = (
           <div className="text-xs space-y-1 text-slate-300 font-mono">
-            <p className="text-indigo-400">⚡ Frontend: Next.js 16 (98%), React 19 (96%), Tailwind v4 (95%)</p>
-            <p className="text-cyan-400">⚡ Backend: Node.js (94%), Python/FastAPI (90%), PostgreSQL (92%)</p>
-            <p className="text-emerald-400">⚡ AI & Cloud: Vector RAG (92%), Docker (91%), AWS (93%)</p>
+            {SKILLS_DATA.map((skill) => (
+              <p key={skill.name}>
+                <span className="text-sky-300">{skill.category}:</span> {skill.name}
+              </p>
+            ))}
           </div>
         );
         break;
 
       case 'projects':
         responseOutput = (
-          <div className="text-xs space-y-1 font-mono">
-  <p className="text-cyan-300">
-    1. POS Kasir — Fullstack Point of Sale · Next.js · Django · PostgreSQL
-  </p>
-  <p className="text-indigo-300">
-    2. Student Management — Fullstack CRUD · Next.js · Django REST · PostgreSQL
-  </p>
-  <p className="text-emerald-300">
-    3. Portfolio — Fullstack Personal Portfolio · Next.js · API · Email Integration
-  </p>
-</div>
+          <div className="space-y-1 font-mono text-xs">
+            {PROJECTS_DATA.map((project, index) => (
+              <p key={project.id} className="text-slate-300">
+                {index + 1}. {project.title.trim()} — {project.tags.slice(0, 3).join(' · ')}
+              </p>
+            ))}
+          </div>
         );
         break;
 
       case 'contact':
         responseOutput = (
-          <div className="text-xs font-mono text-emerald-400 space-y-0.5">
-            <p>✉ Email: {PERSONAL_INFO.email}</p>
-            <p>📍 Location: {PERSONAL_INFO.location}</p>
-            <p>🌐 GitHub: {PERSONAL_INFO.github}</p>
+          <div className="space-y-0.5 text-xs font-mono text-slate-300">
+            <p>Email: {PERSONAL_INFO.email}</p>
+            <p>Location: {PERSONAL_INFO.location}</p>
+            <p>GitHub: {PERSONAL_INFO.github}</p>
           </div>
         );
         break;
@@ -223,7 +221,7 @@ export const InteractiveTerminal: React.FC = () => {
           </div>
 
           <p className="text-[11px] text-slate-400 mb-3 italic">
-            // {CODE_SNIPPETS[activeSnippetIndex].description}
+            {'// '}{CODE_SNIPPETS[activeSnippetIndex].description}
           </p>
 
           <pre className="text-[12px] leading-relaxed text-indigo-200 overflow-x-auto p-3 bg-slate-950/60 rounded-xl border border-slate-900">

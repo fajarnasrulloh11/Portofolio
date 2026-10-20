@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import { SKILLS_DATA } from '@/data/portfolioData';
 
 import {
-  SparklesIcon,
   ZapIcon,
 
   // Frontend
@@ -32,7 +31,7 @@ export const SkillsMatrix: React.FC = () => {
   const [activeCategory, setActiveCategory] =
     useState<string>('All');
 
-  const categories = ['All', 'Frontend', 'Backend'];
+  const categories = ['All', ...new Set(SKILLS_DATA.map((skill) => skill.category))];
 
   const filteredSkills =
     activeCategory === 'All'
@@ -96,42 +95,35 @@ export const SkillsMatrix: React.FC = () => {
   return (
     <section
       id="skills"
-      className="py-24 relative bg-slate-950/40"
+      className="border-b border-slate-800/80 py-16 sm:py-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Title */}
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div className="max-w-2xl mb-9 space-y-3">
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-            <SparklesIcon size={14} />
-            <span>Technical Capabilities</span>
-          </div>
+          <p className="font-mono text-sm text-sky-300">02 / Tools in use</p>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Tech Stack &{' '}
-            <span className="text-gradient-cyan">
-              Skills Matrix
-            </span>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+            Technologies
           </h2>
 
-          <p className="text-slate-400 text-sm sm:text-base">
-            Core technologies, frameworks, and tools used
-            across modern frontend and backend development.
+          <p className="text-slate-400 text-sm sm:text-base leading-6">
+            Technologies used across the projects shown here, organized by where they fit in the stack.
           </p>
 
-          {/* Filter Pills */}
-          <div className="flex flex-wrap justify-center gap-2 pt-4">
+          <div className="flex flex-wrap gap-2 pt-3">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() =>
                   setActiveCategory(category)
                 }
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-all ${
+                aria-pressed={activeCategory === category}
+                className={`inline-flex min-h-10 items-center gap-2 rounded-md border px-3 py-2 text-xs font-medium transition-colors ${
                   activeCategory === category
-                    ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30'
-                    : 'glass-panel text-slate-400 hover:text-slate-200'
+                    ? 'border-sky-300 bg-sky-300 text-slate-950'
+                    : 'border-slate-700 text-slate-300 hover:border-slate-500 hover:text-white'
                 }`}
               >
                 {getCategoryIcon(category)}
@@ -142,17 +134,17 @@ export const SkillsMatrix: React.FC = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 
           {filteredSkills.map((skill) => (
             <div
               key={skill.name}
-              className="group glass-card p-5 rounded-2xl border border-slate-800/80 hover:border-indigo-500/40 transition-all duration-300 hover:-translate-y-1"
+              className="group flex items-center gap-4 border-t border-slate-800 py-4"
             >
               <div className="flex items-center gap-4">
 
                 {/* Technology Icon */}
-                <div className="w-14 h-14 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-indigo-500/40 transition-colors">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center text-sky-300">
                   {getSkillIcon(skill.icon)}
                 </div>
 
@@ -165,15 +157,9 @@ export const SkillsMatrix: React.FC = () => {
                       {skill.name}
                     </h3>
 
-                    {skill.popular && (
-                      <span className="shrink-0 text-[9px] px-2 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-mono">
-                        Popular
-                      </span>
-                    )}
-
                   </div>
 
-                  <p className="text-[11px] text-slate-500 font-mono mt-1">
+                  <p className="text-xs text-slate-500 font-mono mt-1">
                     {skill.category}
                   </p>
 
@@ -188,4 +174,3 @@ export const SkillsMatrix: React.FC = () => {
     </section>
   );
 };
-

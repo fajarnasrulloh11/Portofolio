@@ -2,49 +2,29 @@
 
 import React from 'react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
-import { SparklesIcon, GithubIcon, ExternalLinkIcon, ArrowUpRightIcon } from '@/components/icons';
+import { ArrowUpRightIcon } from '@/components/icons';
 
-export const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  return (
-    <footer className="border-t border-slate-800 bg-[#06070b] py-12 relative z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        {/* Brand */}
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
-            <SparklesIcon size={16} />
-          </div>
-          <div>
-            <p className="text-sm font-bold text-white font-mono">{PERSONAL_INFO.name}</p>
-            <p className="text-[11px] text-slate-500 font-mono">
-              © {new Date().getFullYear()} All rights reserved. Built with Next.js 16 & React 19.
-            </p>
-          </div>
-        </div>
-
-        {/* Links & Socials */}
-        <div className="flex items-center gap-6 text-xs text-slate-400 font-mono">
-          <a href="#about" className="hover:text-slate-200 transition-colors">About</a>
-          <a href="#projects" className="hover:text-slate-200 transition-colors">Projects</a>
-          <a href="#skills" className="hover:text-slate-200 transition-colors">Skills</a>
-          <a href="#experience" className="hover:text-slate-200 transition-colors">Experience</a>
-          <a href="#contact" className="hover:text-slate-200 transition-colors">Contact</a>
-        </div>
-
-        {/* Back to Top */}
-        <button
-          onClick={scrollToTop}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl glass-panel text-slate-400 hover:text-white text-xs font-mono transition-all"
-        >
-          <span>Back to Top</span>
-          <ArrowUpRightIcon size={14} className="-rotate-45" />
-        </button>
-
+export const Footer: React.FC = () => (
+  <footer className="border-t border-slate-800 py-8">
+    <div className="mx-auto flex max-w-6xl flex-col gap-5 px-4 text-sm sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div>
+        <p className="font-medium text-slate-200">{PERSONAL_INFO.name}</p>
+        <p className="mt-1 text-xs text-slate-500">
+          © {new Date().getFullYear()} · Built with Next.js and React
+        </p>
       </div>
-    </footer>
-  );
-};
+
+      <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-slate-400">
+        <a href="#about" className="hover:text-white">About</a>
+        <a href="#projects" className="hover:text-white">Projects</a>
+        <a href="#skills" className="hover:text-white">Skills</a>
+        <a href="#experience" className="hover:text-white">Certifications</a>
+        <a href="#contact" className="hover:text-white">Contact</a>
+      </nav>
+
+      <a href="#hero" className="inline-flex min-h-10 items-center gap-1 text-xs text-slate-400 hover:text-white">
+        Back to top <ArrowUpRightIcon size={14} className="-rotate-45" />
+      </a>
+    </div>
+  </footer>
+);
