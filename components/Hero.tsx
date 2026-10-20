@@ -7,22 +7,17 @@ import { ArrowUpRightIcon, GithubIcon, MailIcon } from '@/components/icons';
 
 export const Hero: React.FC = () => (
   <section id="hero" className="border-b border-slate-800/80 pt-32 pb-16 sm:pt-40 sm:pb-20">
-    <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8">
+    <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8">
       <div className="space-y-7 lg:col-span-7">
-        <p className="font-mono text-sm text-sky-300">
-          Portfolio / {PERSONAL_INFO.location}
-        </p>
-
         <div className="space-y-4">
           <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
             {PERSONAL_INFO.name}
             <span className="mt-2 block text-2xl font-normal leading-snug text-slate-300 sm:text-3xl">
-              Information Technology student building web applications.
+             Software Engineer
             </span>
           </h1>
           <p className="max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
-            I work across frontend and backend development, turning project ideas into practical web applications with tools such as Next.js, React, Django, and PostgreSQL.
-          </p>
+focused on designing, developing, and maintaining modern web applications with an emphasis on clean architecture, performance, and maintainable code.          </p>
         </div>
 
         <div className="flex flex-wrap items-center gap-3 pt-1">

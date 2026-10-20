@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
-import { AboutSection } from '@/components/AboutSection';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { SkillsMatrix } from '@/components/SkillsMatrix';
 import { ExperienceTimeline } from '@/components/ExperienceTimeline';
@@ -22,7 +21,6 @@ export default function Home() {
       {/* Main Page Sections */}
       <main className="flex-grow">
         <Hero />
-        <AboutSection />
         <ProjectsSection />
         <SkillsMatrix />
         <ExperienceTimeline />

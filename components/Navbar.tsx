@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { MenuIcon, XIcon, DownloadIcon, SparklesIcon } from '@/components/icons';
+import { MenuIcon, XIcon, DownloadIcon,  } from '@/components/icons';
 import { PERSONAL_INFO } from '@/data/portfolioData';
 
 interface NavbarProps {
@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
   }, []);
 
   const navLinks = [
-    { label: 'About', href: '#about' },
+    { label: 'About', href: '#hero' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
     { label: 'Experience', href: '#experience' },
