@@ -8,44 +8,47 @@ export const PERSONAL_INFO = {
   location: 'Jakarta Selatan, DKI Jakarta, Indonesia',
   email: 'fajarnasrulloh89@gmail.com',
   github: 'https://github.com/fajarnasrulloh11',
-  linkedin: 'https://www.linkedin.com/in/fajar-nasrulloh-943ab1290/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BvtHR%2Fq57SqqW1TDERNIPfQ%3D%3D',
+  linkedin: 'https://www.linkedin.com/in/fajar-nasrulloh-943ab1290/',
   status: 'Software Engineer',
   bio: `Passionate Software Engineer focused on building modern and scalable web applications. Experienced with Next.js, React, TypeScript, Django, Python, REST APIs, and PostgreSQL, with a strong interest in creating reliable solutions across frontend and backend.`,
-  stats: [
-    { label: 'Clean Code', value: '100%' },
-    { label: 'Certifications', value: '2+' },
-    { label: 'Developer', value: '1+' },
-  ]
 };
 
 export const PROJECTS_DATA: Project[] = [
-  {
-    id: 'Demo Kasir',
-    title: 'Aplikasi pemesanan ',
-    shortDescription: 'Aplikasi kasir dan pemesanan makanan.',
-    fullDescription: 'Aplikasi full-stack untuk mengelola produk, pesanan, pembayaran, dan transaksi.',
-    category: 'frontend',
-    image: '/kasir.png',
-    tags: ['Next.js', 'TypeScript', 'Django', 'PostgreSQL', 'Tailwind CSS'],
-    metrics: [
-       { label: 'Performance', value: 'Fast' },
-      { label: 'Stack', value: 'Full-stack' },
-    ],
-    githubUrl: 'https://github.com/fajarnasrulloh11/Demo-Kasir.git',
-    liveUrl: 'https://example.com',
-    featured: true,
-    highlights: [
-  'Membangun sistem pemesanan makanan dan minuman dengan alur order hingga pembayaran',
-  'Mengembangkan dashboard admin untuk mengelola produk, pesanan, stok, dan status transaksi',
-  'Menerapkan responsive UI agar aplikasi nyaman digunakan pada desktop, tablet, dan mobile'
-],
-architecture: [
-  'Next.js 16 App Router dengan React dan Tailwind CSS untuk frontend',
-  'Django REST Framework sebagai backend API dengan PostgreSQL sebagai database',
-  'REST API untuk menghubungkan proses pemesanan, pembayaran, dan manajemen data secara terstruktur'
-    ],
-    date: '2026'
-  },
+  
+{
+  id: 'Demo Kasir',
+  title: 'Food Ordering & POS System',
+  shortDescription: 'A full-stack cashier and food ordering application.',
+  fullDescription:
+    'A full-stack web application for managing products, customer orders, payments, inventory, and sales transactions.',
+  category: 'frontend',
+  image: '/kasir.png',
+  tags: [
+    'Next.js',
+    'TypeScript',
+    'Django',
+    'PostgreSQL',
+    'Tailwind CSS'
+  ],
+  metrics: [
+    { label: 'Performance', value: 'Optimized' },
+    { label: 'Architecture', value: 'Full-Stack' },
+  ],
+  githubUrl: 'https://github.com/fajarnasrulloh11/Demo-Kasir.git',
+  liveUrl: 'https://example.com',
+  featured: true,
+  highlights: [
+    'Developed a food and beverage ordering system covering the entire workflow, from order placement to payment processing',
+    'Built an administrative dashboard for managing products, orders, inventory, and transaction statuses',
+    'Implemented a responsive user interface optimized for desktop, tablet, and mobile devices'
+  ],
+  architecture: [
+    'Next.js 16 App Router, React, and Tailwind CSS for the frontend application',
+    'Django REST Framework for backend API development, with PostgreSQL for data storage',
+    'RESTful API architecture to support order processing, payment workflows, and structured data management'
+  ],
+  date: '2026'
+},
   {
   id: 'Crud Mahasiswa',
   title: 'Student Management System',
